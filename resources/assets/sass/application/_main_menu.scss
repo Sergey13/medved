@@ -1,0 +1,283 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25.12.2015, 13:45:00
+    Author     : alinka papish
+*/
+
+.navbar {
+    position: relative;
+    z-index: 2;
+    @media only screen and (max-width: 768px),
+        only screen and (max-device-width: 768px) {
+        text-align: center;
+    }
+}
+
+.main-menu {
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    
+    li {
+        display: inline-block;
+        a {
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            display: inline-block; 
+            
+            .active-line {
+                position: absolute;
+                top: 0;
+                width: 0%;
+                height: 3px;
+                background-color: white;
+                transition: all 0.1s ease-in-out 0.01s;
+            }
+
+            [data-name='places'] {
+                .active-line {
+                    top: -13px;
+                }
+            }
+            
+            [class^="flaticon-"]:before, 
+            [class*=" flaticon-"]:before, 
+            [class^="flaticon-"]:after,
+            [class*=" flaticon-"]:after,
+            [class^="fa"]:before,
+            [class*=" fa"]:before {
+                font-size: 50px;
+                margin-left: 34px;
+                margin-right: 34px;
+            }
+            
+            &:hover, &.active {
+                .active-line {
+                    width: 100%;
+                }
+                [class^="flaticon-"]:before, 
+                    [class*=" flaticon-"]:before, 
+                    [class^="flaticon-"]:after,
+                    [class*=" flaticon-"]:after {
+                    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+                }
+            }
+            
+            &.empty-stock {
+                position: absolute;
+                bottom: 0;
+                top: 0px;
+                transform: rotate(-90deg);
+                font-size: 24px;
+                z-index: 99;
+                margin: 0 5px;
+                transition: all 0.1s ease-in 0.01s;
+                
+                &:hover {
+                    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+                    
+                    [class^="fa"]:before,
+                        [class*=" fa"]:before {
+                        font-size: 38px;
+                    }
+                }
+                
+                [class^="fa"]:before,
+                [class*=" fa"]:before {
+                    font-size: 33px;
+                }
+            }
+            
+            .notifications {
+                
+                &.animate {
+                    -webkit-animation-name: bell; /* Chrome, Safari, Opera */
+                    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+                    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+
+                    animation-name: bell;
+                    animation-duration: 1.8s;
+                    animation-iteration-count: infinite;
+
+                    &:hover {
+
+                        animation: none;
+
+                        -webkit-animation: none;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    &.menu-right {
+        width: auto;
+        right: 0;
+        left: auto;
+    }
+    
+    @media only screen and (max-width: 768px),
+        only screen and (max-device-width: 768px) {
+        
+        position: relative;
+        width:auto;
+        
+        &.menu-right {
+            position: absolute;
+            right: -19px;
+            width: 100%;
+            
+            a {
+                position: absolute;
+                right: 20px;
+            }
+            
+            a.notifications {
+                position: absolute;
+                right: 47px;
+                font-size: 15px;
+                
+                i:before {
+                    font-size: 38px;
+                }
+            }
+        }
+        
+        li {
+            float: none;
+            width: 19%;
+            a {
+                [class^="flaticon-"]:before, 
+                    [class*=" flaticon-"]:before, 
+                    [class^="flaticon-"]:after,
+                    [class*=" flaticon-"]:after {
+                    font-size: 30px;
+                    margin-left: 14px;
+                    margin-right: 14px;
+                }
+            }
+        }
+        
+    }
+}
+
+.main-menu-right {
+    li {
+        display: inline-block;
+        a {
+            color: #fff;
+            text-decoration: none;
+            
+            [class^="flaticon-"]:before, 
+            [class*=" flaticon-"]:before, 
+            [class^="flaticon-"]:after,
+            [class*=" flaticon-"]:after {
+                font-size: 50px;
+                margin-left: 24px;
+                margin-right: 24px;
+            }
+        }
+    }
+} 
+
+
+.block-notifications, .balance-notifications {
+    
+    position: absolute;
+    
+    display: none;
+    
+    right: 8%;
+    
+    top: 69px;
+    
+    background-color: white;
+    
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    
+    max-height: 450px;
+    
+    min-width: 300px;
+    
+    overflow-x: auto;
+    
+    z-index: 2;
+    
+    @media only screen and (max-width: 768px),
+    only screen and (max-device-width: 768px) {
+        
+        [data-toggle="close-block"] {
+            top: -4px;
+            right: 18px;
+        }
+    }
+    
+}
+
+.balance-notifications {
+    
+    right: 34%;
+    
+    min-width: 340px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bell {
+     0%  {transform: rotateZ(12deg);}
+     5%  {transform: rotateZ(24deg);}
+    10%  {transform: rotateZ(45deg);}
+    15%  {transform: rotateZ(67deg);}
+    20%  {transform: rotateZ(90deg);}
+    25%  {transform: rotateZ(67deg);}
+    30%  {transform: rotateZ(45deg);}
+    35%  {transform: rotateZ(24deg);}
+    40%  {transform: rotateZ(12deg);}
+    45%  {transform: rotateZ(0deg);}
+    50%  {transform: rotateZ(-12deg);}
+    55%  {transform: rotateZ(-24deg); }
+    60%  {transform: rotateZ(-45deg);}
+    65%  {transform: rotateZ(-67deg); }
+    70%  {transform: rotateZ(-90deg); }
+    75%  {transform: rotateZ(-67deg);}
+    80%  {transform: rotateZ(-45deg);}
+    85%  {transform: rotateZ(-24deg); }
+    90%  {transform: rotateZ(-12deg);}
+    100%  {transform: rotateZ(0deg) ;}
+}
+
+/* Standard syntax */
+@keyframes bell {
+     0%  {transform: rotateZ(12deg);}
+     5%  {transform: rotateZ(24deg);}
+    10%  {transform: rotateZ(45deg);}
+    15%  {transform: rotateZ(67deg);}
+    20%  {transform: rotateZ(90deg);}
+    25%  {transform: rotateZ(67deg);}
+    30%  {transform: rotateZ(45deg);}
+    35%  {transform: rotateZ(24deg);}
+    40%  {transform: rotateZ(12deg);}
+    45%  {transform: rotateZ(0deg);}
+    50%  {transform: rotateZ(-12deg);}
+    55%  {transform: rotateZ(-24deg); }
+    60%  {transform: rotateZ(-45deg);}
+    65%  {transform: rotateZ(-67deg); }
+    70%  {transform: rotateZ(-90deg); }
+    75%  {transform: rotateZ(-67deg);}
+    80%  {transform: rotateZ(-45deg);}
+    85%  {transform: rotateZ(-24deg); }
+    90%  {transform: rotateZ(-12deg);}
+    100%  {transform: rotateZ(0deg) ;}
+}

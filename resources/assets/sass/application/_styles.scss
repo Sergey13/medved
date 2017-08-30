@@ -1,0 +1,201 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24.12.2015, 15:48:53
+    Author     : alinka
+*/
+
+body {
+   font-family: 'PT Sans Narrow', sans-serif;
+   overflow-x: hidden;
+}
+
+.text-white {
+    color: $text-white;
+}
+
+.text-black {
+    color: $text-black;
+}
+
+.text-blue {
+    color: $text-blue;
+}
+
+.block-inline {
+    display: inline-block;
+}
+
+.block-left {
+    float: left;
+}
+
+.block-right {
+    float: right;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.no-padd {
+    padding: 0px !important;
+}
+
+.td-success {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #359c00;
+    color: #20861B;
+    padding: 0px 3px;
+}
+
+[data-toggle="close-block"] {
+    
+    position: absolute;
+    
+    top: 10px;
+    
+    right: 10px;
+}
+
+.print-btn {
+    
+    margin-top: 20px;
+    
+    a, a:hover, a:focus {
+        color: white !important;
+    }
+}
+
+h3 {
+    .print-btn {
+        margin-top: 0px;
+    }
+}
+
+.field-error {
+    border-color: #a94442 !important;
+}
+
+@media print {
+    
+  .noprint { display: none; }
+  
+  .tooltip { display: none !important; }
+  
+}
+
+
+.main-logo {
+    position: relative;
+    display: inline-block;
+    width: 178px;
+    height: 135px;
+    background: url('/images/polarbear.png') no-repeat;
+    background-size: 100% 100%;
+    &.logo-small {
+        width: 135px;
+        height: 94px;
+    }
+    &.navbar-brand {
+        width: 98px;
+        height: 67px;
+    }
+    
+    
+    @media only screen and (max-width: 768px),
+        only screen and (max-device-width: 768px) {
+        &.navbar-brand {
+            float: none;
+            display: inline-block;
+        }
+    }
+}
+
+
+.page-error {
+    text-align: center;
+    background: $main_color;
+
+    .top-line {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 80px;
+        background-image: url('/images/ornament.png');
+        background-repeat: repeat;
+        background-size: auto 100%;
+        margin-top: 35px;
+        text-align: center;
+
+        .main-logo {
+            margin-top: -25px;
+        }
+    }
+
+
+    h1 {
+        margin-top: 50px;
+        color: $text-white;
+        font-size: 8em;
+    }
+    h2 {
+        color: $text-white;
+        font-size: 3em;
+    }
+} 
+
+
+.error-field {
+    
+    display: none;
+    background-color: #c9302c;
+    border: 1px solid #ac2925;
+    color: #fff;
+}
+
+.bar {
+    height: 18px;
+    background: green;
+}
+
+
+#dropzone {
+    background: #ccc;
+    border: 1px solid #EDF8FE; 
+    width: 100%;
+    height: 250px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+#dropzone.in {
+    width: 600px;
+    height: 200px;
+    line-height: 200px;
+    font-size: larger;
+}
+#dropzone.hover {
+    background: lawngreen;
+}
+#dropzone.fade {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}

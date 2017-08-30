@@ -1,0 +1,93 @@
+.cssload-coffee {
+	text-align:left;
+	height: 88px;
+	width: 70px;
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+	position: absolute;
+	left: 50%;
+	z-index: 999;
+	background: linear-gradient(to bottom left, rgb(67,140,204), rgb(0,36,107));
+		background: -o-linear-gradient(to bottom left, rgb(67,140,204), rgb(0,36,107));
+		background: -ms-linear-gradient(to bottom left, rgb(67,140,204), rgb(0,36,107));
+		background: -webkit-linear-gradient(to bottom left, rgb(67,140,204), rgb(0,36,107));
+		background: -moz-linear-gradient(to bottom left, rgb(67,140,204), rgb(0,36,107));
+}
+.cssload-coffee:before {
+	position: absolute;
+	content: "";
+	right: -26px;
+	top: 9px;
+	height: 44px;
+	width: 18px;
+	background: transparent;
+	border: 9px solid rgb(235,80,80);
+	border-left: 9px solid transparent;
+	border-bottom: 9px solid rgb(209,50,50);
+	border-top-right-radius: 18px;
+	border-bottom-right-radius: 18px;
+	z-index: 1;
+}
+.cssload-coffee:after {
+	position: absolute;
+	content: "";
+	width: 9px;
+	height: 53px;
+	background: rgb(219,219,219);
+	border-radius: 7px;
+	top: -53px;
+	box-shadow: 61px 0px 0 rgb(219,219,219), 30.5px -26px 0 rgb(225,225,225);
+	opacity: 1;
+	animation: cssload-steam 1.95s ease infinite;
+		-o-animation: cssload-steam 1.95s ease infinite;
+		-ms-animation: cssload-steam 1.95s ease infinite;
+		-webkit-animation: cssload-steam 1.95s ease infinite;
+		-moz-animation: cssload-steam 1.95s ease infinite;
+}
+
+
+
+@keyframes cssload-steam {
+	100% {
+		top: -70px;
+		background: rgb(238,238,238);
+		box-shadow: 61px 0px 0 rgb(250,250,250), 30.5px -26px 0 rgb(250,250,250);
+		opacity: 0.25;
+	}
+}
+
+@-o-keyframes cssload-steam {
+	100% {
+		top: -70px;
+		background: rgb(238,238,238);
+		box-shadow: 61px 0px 0 rgb(250,250,250), 30.5px -26px 0 rgb(250,250,250);
+		opacity: 0.25;
+	}
+}
+
+@-ms-keyframes cssload-steam {
+	100% {
+		top: -70px;
+		background: rgb(238,238,238);
+		box-shadow: 61px 0px 0 rgb(250,250,250), 30.5px -26px 0 rgb(250,250,250);
+		opacity: 0.25;
+	}
+}
+
+@-webkit-keyframes cssload-steam {
+	100% {
+		top: -70px;
+		background: rgb(238,238,238);
+		box-shadow: 61px 0px 0 rgb(250,250,250), 30.5px -26px 0 rgb(250,250,250);
+		opacity: 0.25;
+	}
+}
+
+@-moz-keyframes cssload-steam {
+	100% {
+		top: -70px;
+		background: rgb(238,238,238);
+		box-shadow: 61px 0px 0 rgb(250,250,250), 30.5px -26px 0 rgb(250,250,250);
+		opacity: 0.25;
+	}
+}
